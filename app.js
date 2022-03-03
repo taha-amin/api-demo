@@ -2,6 +2,8 @@
 
 import { getPokedex } from './fetch.js';
 
+import { getStarWarsCharacters } from './fetch.js';
+
 // grab DOM elements
 const template = document.querySelector('#template');
 const listEl = document.querySelector('#list');
@@ -28,6 +30,28 @@ async function loadPokedex() {
         listEl.appendChild(clone);
     }
 }
+
+async function loadStarWarsCharacters() {
+    const starWars = await getStarWarsCharacters();
+
+    listEl.classList.add('star-wars');
+
+    for (let person of starWars) {
+        const clone = template.content.cloneNode(true);
+
+        const name = clone.querySelector('h2');
+        const image = clone.querySelector('img');
+        const type = clone.querySelector('h6');
+
+        name.textContent = 'Name :' + person.name;
+        image.src = person.url_image;
+        type.textContent = 'Hair Color: ' + person.hair_color;
+
+        listEl.appendChild(clone);
+    }
+}
+
+loadStarWarsCharacters();
 
 //loadPokedex();
 
