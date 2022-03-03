@@ -1,6 +1,10 @@
 // import functions
 
 // grab DOM elements
+const template = document.querySelector('#template');
+const selectEl = document.querySelector('select');
+const listEl = document.querySelector('#list');
+
 
 // set event listeners 
     // get user input
