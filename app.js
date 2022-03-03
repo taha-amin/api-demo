@@ -38,11 +38,11 @@ selectEl.addEventListener('change', async(e) => {
     const selected = e.target.value;
 
     if (selected === 'pokemon') {
-        listEl.classList.remove('star-wars');
+        //listEl.classList.remove('star-wars');
         listEl.innerHTML = '';
         await loadPokedex();
     } else if (selected === 'star-wars') {
-        listEl.classList.remove('pokemon');
+        //listEl.classList.remove('pokemon');
         listEl.innerHTML = '';
         await loadStarWars();
     }
