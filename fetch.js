@@ -9,7 +9,7 @@ export async function getPokedex() {
 }
 
 export async function getStarWarsCharacters() {
-    let url = 'https://swapi.dev/api/people/1/';
+    let url = 'https://swapi.dev/api/people';
 
     const resp = await fetch(url);
 
