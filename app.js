@@ -4,8 +4,8 @@ import { getPokedex } from './fetch.js';
 
 // grab DOM elements
 const template = document.querySelector('#template');
-const selectEl = document.querySelector('select');
 const listEl = document.querySelector('#list');
+const selectEl = document.querySelector('select');
 
 async function loadPokedex() {
     const pokedex = await getPokedex();
@@ -29,9 +29,23 @@ async function loadPokedex() {
     }
 }
 
+//loadPokedex();
+
 // get user input and console log user clicked
-selectEl.addEventListener('change', (e) => {
-    console.log('user clicked');
+selectEl.addEventListener('change', async(e) => {
+    //console.log('user clicked');
+
+    const selected = e.target.value;
+
+    if (selected === 'pokemon') {
+        listEl.classList.remove('star-wars');
+        listEl.innerHTML = '';
+        await loadPokedex();
+    } else if (selected === 'star-wars') {
+        listEl.classList.remove('pokemon');
+        listEl.innerHTML = '';
+        await loadStarWars();
+    }
 });
 
 
