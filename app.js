@@ -1,6 +1,6 @@
 // import functions
 
-import { getPokedex } from "./fetch";
+import { getPokedex } from './fetch.js';
 
 // grab DOM elements
 const template = document.querySelector('#template');
@@ -29,7 +29,15 @@ async function loadPokedex() {
     }
 }
 
+// get user input and console log user clicked
+selectEl.addEventListener('change', (e) => {
+    console.log('user clicked');
+});
+
+
 // set event listeners
     // get user input
     // use user input to update state 
     // update DOM to reflect the new state
+
+
