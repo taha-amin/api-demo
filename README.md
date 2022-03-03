@@ -1,7 +1,5 @@
 ## The Golden Rule:
 
-![Wireframe for app](/assets/APIdemowireframe.png)
-
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
 If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
@@ -9,6 +7,7 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 1. **Make a drawing of your app. Simple "wireframes"**
+![Wireframe for app](/assets/APIdemowireframe.png)
 
 1. **Once you have a drawing, name the HTML elements you'll need to realize your vision**
 name the html elements needed to realize vision
